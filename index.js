@@ -92,7 +92,7 @@ $("document").ready(function() {
       $("body").empty()
       $("body").append("<img class='test-image' src='testImg.jpg'></img>")
     } else {
-      console.log("nope!")
+      $("h2").text("You need to enter valid information!")
     }
   }
 
