@@ -1,6 +1,8 @@
 $("document").ready(function() {
+
   $("button").click(function() {
     validateAll()
+    moveImage()
   })
 
   $(".email").keyup(function() {
@@ -86,6 +88,11 @@ $("document").ready(function() {
     } else {
       console.log("nope!")
     }
+  }
+
+  function moveImage() {
+    $("img").click(function() {
+    })
   }
 
 })
