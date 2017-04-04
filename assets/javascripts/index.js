@@ -90,7 +90,7 @@ $("document").ready(function() {
 
     if(validEmail(email) && validCc(card) && validPhone(phone)) {
       $("body").empty()
-      $("body").append("<img class='test-image' src='testImg.jpg'></img>")
+      $("body").append("<img class='test-image' src='assets/images/testImg.jpg'></img>")
     } else {
       $("h2").text("You need to enter valid information!")
     }
