@@ -9,7 +9,9 @@ $("document").ready(function() {
     var value = $(".email").val().split("")
 
     if (validEmail(value) == true) {
-      console.log("valid email")
+      $(".email-valid").text("Valid email!") 
+    } else {
+      $(".email-valid").text("")
     }
   })
 
@@ -17,14 +19,18 @@ $("document").ready(function() {
     var value = $(".phone").val().replace(/\D/g,'')
 
     if(validPhone(value) == true) {
-      console.log("valid phone")
+      $(".phone-valid").text("Valid phone!")
+    } else {
+      $(".phone-valid").text("")
     }
   })
 
   $(".cc").keyup(function() {
     var value = $(".cc").val().replace(/\D/g,'')
     if(validCc(value) == true) {
-      console.log("valid cc")
+      $(".cc-valid").text("Valid card!")
+    } else {
+      $(".cc-valid").text("")
     }
 
   })
