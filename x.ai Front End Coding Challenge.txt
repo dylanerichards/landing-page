@@ -1,0 +1,32 @@
+x.ai Front End Coding Challenge
+
+Thanks for taking the time to complete this coding challenge!  You can feel free to complete this challenge using any tools of your choosing, and google as much as you’d like.  The challenge should be completed in 1.5 hours.  After the allotted time, please zip up your project and email back to me.
+
+
+————
+
+1) Style the h1, inputs and submit button to look as close as possible to what you seen on https://x.ai website’s free trial signup.  The submit button should however be on it’s own line, not inline with any of the inputs.
+
+2) The inputs should capture: email, phone number and credit card number, and should validate each time the value of the input changes.  Please show some type of visual indicator that the input is valid or invalid.
+	- validate that the email field contains exactly 1 “@“ character
+	- validate that the phone field contains exactly 10 digits, other non-numerical characters are allowed
+	- validate that the credit card field contains 16 digits, and begins with either “3”, “4” or “5”
+
+3. Additionally, as numbers are entered into the credit card field, the markers for “Visa”, “MasterCard” and “American Express” should standout from the other two according to the following rules:
+	- if the value begins with “3” highlight “American Express”
+	- if the value begins with “4” highlight “Visa”
+	- if the value begins with “5” highlight “MasterCard”
+	- if the value begins with a number that is neither “3”, nor “4”, nor “5”, none of the markers should be highlighted
+	- the highlighting should be applied per keystroke and should require no “button” to be clicked to apply the logic
+
+4. Once the above steps have been taken, and each field has valid input, clicking submit should return a “success” indicator of your choosing, after which all of the existing elements should be removed from the document body, and after that the testImg.jpg should be appended to the document - centered vertically and horizontally.
+
+5. Please write a handler for the testImg so that:
+	- clicking on it the first time will move the image to the top right of the window
+	- clicking on it the second time will move the image to the bottom left of the window
+	- clicking on it the third time will move the image to the top left of the window
+	- clicking on it the fourth time will move the image to the bottom right of the window
+	- clicking on it the fifth time will remove the image from the document
+	** when the image is in any corner of the window, it should stay in that corner even as the user scrolls up or down
+
+6. Finished!  Please zip up the project, including any files you’ve added, and email that to me.
