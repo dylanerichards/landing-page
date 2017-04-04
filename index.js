@@ -23,7 +23,7 @@ $("document").ready(function() {
   $(".cc").keyup(function() {
     var value = $(".cc").val().replace(/\D/g,'')
 
-    if (value.match(/^\d{16}$/) && startsCorrectly(value)) {
+    if (startsCorrectly(value) && value.match(/^\d{16}$/)) {
       console.log("valid")
     } else {
       console.log("invalid")
@@ -32,12 +32,24 @@ $("document").ready(function() {
 
   function startsCorrectly(cardNumber) {
     if(cardNumber[0] == 3) {
+      $(".ae").addClass("highlight")
+      $(".mc").removeClass("highlight")
+      $(".visa").removeClass("highlight")
       return true
     } else if(cardNumber[0] == 4) {
+      $(".visa").addClass("highlight")
+      $(".mc").removeClass("highlight")
+      $(".ae").removeClass("highlight")
       return true
     } else if(cardNumber[0] == 5) {
+      $(".mc").addClass("highlight")
+      $(".visa").removeClass("highlight")
+      $(".ae").removeClass("highlight")
       return true
     } else {
+      $(".visa").removeClass("highlight")
+      $(".ae").removeClass("highlight")
+      $(".mc").removeClass("highlight")
       return false
     }
   }
