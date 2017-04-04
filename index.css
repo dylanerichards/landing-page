@@ -48,3 +48,11 @@ button {
 .highlight {
   background: #ff8f6d;
 }
+
+.test-image {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  margin-top: -75px;
+  margin-left: -75px;
+}
