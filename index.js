@@ -1,33 +1,30 @@
 $("document").ready(function() {
+  $("button").click(function() {
+    validateAll()
+  })
 
   $(".email").keyup(function() {
     var value = $(".email").val().split("")
 
-    if(_.countBy(value)['@'] == 1) {
-      console.log("valid")
-    } else {
-      console.log("invalid")
+    if (validEmail(value) == true) {
+      console.log("valid email")
     }
   })
 
   $(".phone").keyup(function() {
     var value = $(".phone").val().replace(/\D/g,'')
 
-    if (value.match(/^\d{10}$/)) {
-      console.log("valid")
-    } else {
-      console.log("invalid")
+    if(validPhone(value) == true) {
+      console.log("valid phone")
     }
   })
 
   $(".cc").keyup(function() {
     var value = $(".cc").val().replace(/\D/g,'')
-
-    if (startsCorrectly(value) && value.match(/^\d{16}$/)) {
-      console.log("valid")
-    } else {
-      console.log("invalid")
+    if(validCc(value) == true) {
+      console.log("valid cc")
     }
+
   })
 
   function startsCorrectly(cardNumber) {
@@ -54,4 +51,41 @@ $("document").ready(function() {
     }
   }
 
+  function validEmail(value) {
+    if(_.countBy(value)['@'] == 1) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  function validPhone(value) {
+    if (value.match(/^\d{10}$/)) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  function validCc(value) {
+    if (startsCorrectly(value) && value.match(/^\d{16}$/)) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  function validateAll() {
+    var email = $(".email").val()
+    var card = $(".cc").val()
+    var phone = $(".phone").val()
+
+    if(validEmail(email) && validCc(card) && validPhone(phone)) {
+      console.log("we out!")
+    } else {
+      console.log("nope!")
+    }
+  }
+
 })
+
