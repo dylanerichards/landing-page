@@ -98,6 +98,7 @@ $("document").ready(function() {
 
   function moveImage() {
     $("img").click(function() {
+      alert("Some day I will move this all over the DOM!")
     })
   }
 
