@@ -81,7 +81,7 @@ $("document").ready(function() {
     var phone = $(".phone").val()
 
     if(validEmail(email) && validCc(card) && validPhone(phone)) {
-      console.log("we out!")
+      $("body").empty()
     } else {
       console.log("nope!")
     }
