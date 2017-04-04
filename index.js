@@ -20,5 +20,26 @@ $("document").ready(function() {
     }
   })
 
+  $(".cc").keyup(function() {
+    var value = $(".cc").val().replace(/\D/g,'')
+
+    if (value.match(/^\d{16}$/) && startsCorrectly(value)) {
+      console.log("valid")
+    } else {
+      console.log("invalid")
+    }
+  })
+
+  function startsCorrectly(cardNumber) {
+    if(cardNumber[0] == 3) {
+      return true
+    } else if(cardNumber[0] == 4) {
+      return true
+    } else if(cardNumber[0] == 5) {
+      return true
+    } else {
+      return false
+    }
+  }
 
 })
